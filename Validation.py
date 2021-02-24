@@ -18,4 +18,3 @@ class Validation:
                 raise ValueError("Number must be > 0")
             return func(self, value)
         return numberWrapper
-    
