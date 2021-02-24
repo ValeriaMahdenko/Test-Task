@@ -9,8 +9,10 @@ class Casino:
         self.count = []
 
     def __str__(self):
-        return f'\t\tName : {self.name}\t\tMoney: {self.money}\t\tCount of game machine: {len(self.count) } ' \
+        return f'\t\tName : {self.name}\t\tMoney: {self.money}' \
+               f'\t\tCount of game machine: {len(self.count) } ' \
                f'\t\tGame Machines: {[i.money for i in self.count]}'
+
     @property
     def name(self):
         return self._name
@@ -35,7 +37,8 @@ class Casino:
         return self.money
 
     def getMachineCount(self):
-        print("Count of game machine in casino ", self.name, " - ", len(self.count))
+        print("Count of game machine in casino ", self.name,
+              " - ", len(self.count))
         return len(self.count)
 
     def money(self):
