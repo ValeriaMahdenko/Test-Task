@@ -66,4 +66,3 @@ class GameMachine:
                   "In game machine should be your suma*3 money( "
                   "\nPlease, use another machine")
             return 0
- 
