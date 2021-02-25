@@ -1,4 +1,4 @@
-from GameMachine import *
+from GameMachine import Validation
 
 
 class User:
