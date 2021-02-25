@@ -88,4 +88,3 @@ class SuperAdmin(User):
                 i.money += money
         else:
             print('The machine does not exist')
-
