@@ -40,8 +40,8 @@ class SuperAdmin(User):
                     counter = self.casino.count[0].money
                     self.casino.count[0].money = 0
                 else:
-                    counter += self.casino.count[0].money - \
-                               self.casino.count[0].take(need)
+                    counter += self.casino.count[0].money\
+                               - self.casino.count[0].take(need)
             self.money += mon
             self.casino.getMoney()
         else:
@@ -87,3 +87,4 @@ class SuperAdmin(User):
                 i.money += money
         else:
             print('The machine does not exist')
+
