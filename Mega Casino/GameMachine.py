@@ -22,23 +22,23 @@ class GameMachine:
     def take(self, number):
         if number <= self.money:
             self.money -= number
-            print("The operation was successful. It remained in the GameMachine ", self.money)
+            print("The operation was successful. It remained"
+                  " in the GameMachine ", self.money)
         else:
             print("Not enough money in the GameMachine")
         return self.money
-
 
     @Validation.validate_number
     def put(self, number):
         self.money += number
 
-
     @Validation.validate_number
     def play(self, number):
-        if number*3 <= self.money:
+        if number * 3 <= self.money:
             suma = 0
             self.put(number)
-            num_result = [random.randint(0, 9), random.randint(0, 9), random.randint(0, 9)]
+            num_result = [random.randint(0, 9), random.randint(0, 9),
+                          random.randint(0, 9)]
             result = ""
             for i in num_result:
                 result += str(i)
@@ -62,7 +62,7 @@ class GameMachine:
                 print("You win ", suma, ". It`s cool!")
             return suma
         else:
-            print("Game machine doesn't have enough money. In game machine should be your suma*3 money( "
+            print("Game machine doesn't have enough money. "
+                  "In game machine should be your suma*3 money( "
                   "\nPlease, use another machine")
             return 0
-
